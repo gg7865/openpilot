@@ -90,7 +90,7 @@ class CarState(CarStateBase):
   def __init__(self, CP, FPCP):
     super().__init__(CP, FPCP)
     can_define = CANDefine(DBC[CP.carFingerprint]["pt"])
-    self.gearbox_msg = "GEARBOX"
+    self.gearbox_msg = "GEARBOX_ALT"
     if CP.carFingerprint == CAR.HONDA_ACCORD and CP.transmissionType == TransmissionType.cvt:
       self.gearbox_msg = "GEARBOX_15T"
     elif CP.carFingerprint == CAR.HONDA_CIVIC_2022 and CP.transmissionType == TransmissionType.cvt:
